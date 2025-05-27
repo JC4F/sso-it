@@ -2,16 +2,10 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { oauthClient } from "./oauth";
+import AuthButtons from "./login-button";
 
 function App() {
   const [count, setCount] = useState(0);
-  const handleLogin = () => {
-    // Sinh URI và redirect người dùng tới trang xác thực
-    const test = oauthClient.token.getUri();
-    console.log(test, "test");
-    window.location.href = oauthClient.token.getUri();
-  };
 
   return (
     <>
@@ -28,7 +22,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <button onClick={handleLogin}>Login with OAuth</button>
+        <AuthButtons />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

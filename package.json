@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "client-oauth2": "^4.3.3",
+    "oidc-client": "^1.11.5",
     "querystring-es3": "^0.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

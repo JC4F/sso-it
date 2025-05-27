@@ -5,14 +5,19 @@ import App from "./App.tsx";
 import { Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Route } from "react-router-dom";
-import OAuthCallback from "./oauth-callback.tsx";
+import OidcCallback from "./OidcCallback.tsx";
+import SilentRenew from "./slient-renew.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/oauth/callback" element={<OAuthCallback />} />
+        <Route
+          path="/authentication/login-callback"
+          element={<OidcCallback />}
+        />
+        <Route path="/authentication/silent-renew" element={<SilentRenew />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
