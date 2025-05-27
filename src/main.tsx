@@ -5,7 +5,7 @@ import App from "./App.tsx";
 import { Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Route } from "react-router-dom";
-import OidcCallback from "./OidcCallback.tsx";
+import OidcCallback from "./oidc-callback.tsx";
 import SilentRenew from "./slient-renew.tsx";
 
 createRoot(document.getElementById("root")!).render(
